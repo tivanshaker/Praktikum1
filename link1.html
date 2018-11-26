@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nangorian's Culinary Obsessed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+
+  </SCRIPT>
+<!-- Navbar -->
+<div class="top">
+  <div class="bar red card">
+    <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="bar-item button padding-large" style="color: white">HOME</a>
+    <a href="#about" class="bar-item button padding-large hide-small" style="color: white">ABOUT</a>
+    <a href="#gallery" class="bar-item button padding-large hide-small" style="color: white">GALLERY</a>
+    <a href="#contact" class="bar-item button padding-large hide-small" style="color: white">CONTACT</a>
+    <div class="dropdown-hover hide-small">
+      <button class="padding-large button" title="More" style="color: white">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="dropdown-content bar-block card-4">
+        <a href="#" class="bar-item button">Cafe & Resto</a>
+        <a href="#" class="bar-item button">Food Recipes</a>
+        <a href="#" class="bar-item button">Food Fact's</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="padding-large hover-red hide-small right" style="color: white"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="bar-block red hide hide-large hide-medium top" style="margin-top:46px">
+  <a href="#about" class="bar-item button padding-large" onclick="myFunction()" style="color: white">ABOUT</a>
+  <a href="#gallery" class="bar-item button padding-large" onclick="myFunction()" style="color: white">GALLERY</a>
+  <a href="#contact" class="bar-item button padding-large" onclick="myFunction()" style="color: white">CONTACT</a>
+  <a href="#" class="bar-item button padding-large" onclick="myFunction()" style="color: white">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides display-container center">
+    <img src="https://malangchannel.com/wp-content/uploads/2017/07/ayam-goreng-nelongso.jpg" alt="cafe" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h1>Nangorian's Culinary Obsessed</h3>
+      <p><b>Here You Find the Finest Food Catalog in Your Area.</b></p>   
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="https://magungh.files.wordpress.com/2017/03/imag8786.jpg" alt="cafe" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h1>New Nangor Paradise</h3>
+      <p><b>One of the best food in this area.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="https://i.ytimg.com/vi/zgnuVkDs-ZE/maxresdefault.jpg" alt="cafe" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h1>PAPA AUS</h3>
+      <p><b>Thai tea and Milk Cheese</b></p>    
+    </div>
+  </div>
+
+  <div class="container white content center padding-64" style="max-width:800px" id="about">
+    <h2 class="wide">ABOUT US</h2>
+    <p class="opacity"><i>We LOVE foods</i></p>
+    <p class="justify">Halo teman-teman semua! Ini adalah website pertama kami. Kami akan terus mencoba untuk memperbarui tampilan dan menambahkan banyak fitur di web ini agar lebih menarik dalam penggunaannya. Tujuan dibuatnya website ini adalah memudahkan para pecinta kuliner khususnya yang berdomisili di wilayah Jatinangor untuk menemukan menu makanan yang sedap. Kami akan merekomendasikan berbagai macam hidangan lezat beserta harga dan tempatnya. Keep calm and eat with love!! 
+    </p>
+
+
+<!-- Image of location/map -->
+<img src="https://www.weightlossresources.co.uk/img/h/high_fibre-food.jpg" style="width:100%">
+
+<!-- Footer -->
+<footer class="container padding-64 center opacity light-grey xlarge">
+  <i class="fa fa-facebook-official hover-opacity"></i>
+  <i class="fa fa-instagram hover-opacity"></i>
+  <i class="fa fa-snapchat hover-opacity"></i>
+  <i class="fa fa-pinterest-p hover-opacity"></i>
+  <i class="fa fa-twitter hover-opacity"></i>
+  <i class="fa fa-linkedin hover-opacity"></i>
+  <p class="medium">It's about Food</p>
+</footer>
+
+<script>
+// Automatic Slideshow - ganti gambar per 4 detik
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// toggle menu di menu
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace(" show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var more = document.getElementById('more');
+window.onclick = function(event) {
+  if (event.target == more) {
+    more.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
